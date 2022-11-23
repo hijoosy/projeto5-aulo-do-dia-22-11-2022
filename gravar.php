@@ -1,4 +1,6 @@
-<?php 
+<?php include_once'cabecalho.php'; 
+
+
 //PASSO 1- pegar dados da tela
 $nome = $_POST["nome"];
 $email = $_POST["email"];
@@ -9,11 +11,10 @@ $foto =$_FILES["foto"];
 $ext = explode(".",$foto["name"]);//[foto][nome][ext]
 $ext = array_reverse($ext);//[amarelas][flores]
 $ext = $ext[0];
-?>
 
-<?php
 
-if(($ext != "jpg") && ($exr != "png") && ($ext !="gif")){
+
+if(($ext != "jpg") && ($ext != "png") && ($ext !="gif")){
     echo "Arquivo Inválido";
 }elseif($foto ["size"] < 1024 *8){
      echo "Tamanho excedido";
@@ -39,7 +40,4 @@ if(mysqli_query($con,$sql)){
     $msg = "Erro ao gravar.";
 }
 mysqli_close($con);
-echo "<script> alert('".$msg."');
-location.href='cadastrar.php'; </script>";
-
 ?>

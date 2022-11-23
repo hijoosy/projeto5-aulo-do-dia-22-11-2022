@@ -2,7 +2,7 @@
 session_start();
 session_destroy();
 
-$msg = "Logout Efetuado";
+$msg = "Log out Efetuado";
 header("location:index.php?msg=".$msg);
 
 ?>

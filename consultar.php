@@ -8,7 +8,7 @@
     }
 
 </script>
-
+ 
 <h4>Consulta por Nome</h4>
 <form action="consultar.php" method="get">
   Nome:<br/>
@@ -60,7 +60,7 @@ while($row = mysqli_fetch_array($result)) {
 
         <td>
         <a href="#" onclick="excluir(<?php echo $row['idcliente']; ?>)">
-            <img src="./img/exx.jpg"/></a> 
+            <img src="./img/excluir1.png"/></a> 
         </td>
     </tr>
     <?php

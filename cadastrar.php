@@ -1,7 +1,7 @@
 <?php include_once'cabecalho.php'; ?>
    <h1>Cadastro de Cliente</h1>
    <hr>
-   <form action="gravar.php" method="post">
+   <form action="gravar.php" method="post" enctype="multipart/form-data">
           Nome:<br/>
          <input type="text" name="nome" 
           placeholder="Digite o nome"
